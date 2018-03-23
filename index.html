@@ -23,12 +23,12 @@
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
-    <ul id="breadcrumb" >
-      <li>Home</li>
+    <ul id="breadcrumb" aria-label="Breadcrumb">
+      <li aria-current="page">Home</li>
     </ul>
   </header>
 
-  <main id="maincontent" class="container">
+  <main id="maincontent" class="container" role="main">
     <section id="map-container" class="box">
       <div id="map" role="application"></div>
     </section>
@@ -56,14 +56,5 @@
   <script src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
 
-  <script>
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
-          console.log('Registration worked!');
-        }).catch(err => {
-          console.log('Registration failed!');
-        });
-    }
-  </script>
 </body>
 </html>
